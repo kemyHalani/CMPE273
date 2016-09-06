@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function condition(n) {
+var day;
+//var n parseInt(num);
+
+switch (parseInt(n)) {
+case 1:
+    day = "January => 31 days";
+    break;
+case 2:
+    day = "February => 28 days";
+    break;
+case 3:
+    day = "March => 31 days";
+    break;
+case 4:
+    day = "April => 30 days";
+    break;
+case 5:
+    day = "May => 31 days";
+    break;
+case 6:
+    day = "June => 30 days";
+    break;
+case 7:
+    day = "July => 31 days";
+    break;
+case 8:
+    day = "August => 31 days";
+    break;
+case 9:
+    day = "September => 30 days";
+    break;
+case 10:
+    day = "October => 31 days";
+    break;
+case 11:
+    day = "November => 30 days";
+    break;
+case 12:
+    day = "December => 31 days";
+default:
+	dat = "please enter valid month"
+}
+document.getElementById("days").innerHTML = day;
+}
+</script>
+<title>Basic</title>
+</head>
+<body>
+Enter Month:
+<input type="text" size="10" id="month" oninput="condition(this.value)"><br>
+
+Calculated days: 
+<p id="days">
+
+</body>
+</html>
