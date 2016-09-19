@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	function type_conv(n) {
+
+		if (n == "kemy") {
+			n = 1;
+			document.getElementById("demo").innerHTML = "Roll number for kemy: "
+					+ n;
+		} else if (n == "aditya") {
+			n = 2;
+			document.getElementById("demo").innerHTML = "Roll number for aditya: "
+					+ n;
+		} else if (n == "parth") {
+			n = 3;
+			document.getElementById("demo").innerHTML = "Roll number for parth: "
+					+ n;
+		}
+	}
+</script>
+</head>
+<body>
+	<input type="radio" name="rollnum" id="one" value="kemy"
+		onclick="type_conv(this.value)"> Kemy
+	<br>
+	<input type="radio" name="rollnum" id="two" value="aditya"
+		onclick="type_conv(this.value)"> Aditya
+	<br>
+	<input type="radio" name="rollnum" id="three" value="parth"
+		onclick="type_conv(this.value)"> Parth
+	<br>
+	<p id="demo"></p>
+</body>
+</html>

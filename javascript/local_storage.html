@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	function getHits() {
+		if (sessionStorage.clickcount) {
+			sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+		} else {
+			sessionStorage.clickcount = 1;
+		}
+		document.getElementById("a").innerHTML = "You have clicked the button "
+				+ sessionStorage.clickcount + " time(s).";
+	}
+</script>
+</head>
+<body>
+	<h1>Calculating number of hits</h1>
+
+	<button onclick="getHits()">Click me!</button>
+	<p id="a"></p>
+</body>
+</html>

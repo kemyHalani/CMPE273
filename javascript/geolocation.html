@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	function getuserLocation() {
+		navigator.geolocation.watchPosition(displayPosition);
+	}
+	function displayPosition(userposition) {
+		document.getElementById("demo").innerHTML = "Longitude: "
+				+ userposition.coords.latitude + "<br>Latitude: "
+				+ userposition.coords.latitude + "<br>Accuracy: "
+				+ userposition.coords.accuracy;
+		var mix = userposition.coords.latitude + ","
+				+ userposition.coords.longitude;
+		var image = "http://maps.googleapis.com/maps/api/staticmap?center="
+				+ mix + "&zoom=14&size=400x300&sensor=false";
+		document.getElementById("demo1").innerHTML = "<img src='"+image+"'>";
+	}
+</script>
+</head>
+<body>
+	<h1>
+		<b><i>Get your current location!!</i></b>
+	</h1>
+
+	<button onclick="getuserLocation()">Hit</button>
+	<p id="demo"></p>
+	<p id="demo1"></p>
+
+
+</body>
+</html>

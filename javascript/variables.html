@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	function speed() {
+		var d = document.getElementById("distance").value;
+		var t = document.getElementById("time").value;
+		var s = d / t;
+		document.getElementById("speed").innerHTML = s;
+	}
+</script>
+<title>Basic</title>
+</head>
+<body>
+	Enter Distance:
+	<input type="text" size="10" id="distance">
+	<br> Enter Time:
+	<input type="text" size="10" id="time" oninput="speed()">
+	<br> Calculated Speed:
+	<p id="speed">
+</body>
+</html>

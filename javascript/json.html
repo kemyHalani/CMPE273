@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	function json() {
+
+		var text = '{"image":['
+				+ '{"imageName":"sun","src":"Images/Sun.png" },'
+				+ '{"imageName":"flower","src":"Images/Flower.png" },'
+				+ '{"imageName":"mountain","src":"Images/Mountain.png" }]}';
+		document.getElementById("demo").innerHTML = "List of all images..";
+		obj = JSON.parse(text);
+		document.getElementById("demo1").innerHTML = "(1) Name: "
+				+ obj.image[0].imageName + " Src: " + obj.image[0].src;
+		document.getElementById("demo2").innerHTML = "(2) Name: "
+				+ obj.image[1].imageName + " Src: " + obj.image[1].src;
+		document.getElementById("demo3").innerHTML = "(3) Name: "
+				+ obj.image[2].imageName + " Src: " + obj.image[2].src;
+	}
+</script>
+</head>
+<body onload="json()">
+	<p id="demo"></p>
+	<p id="demo1"></p>
+	<p id="demo2"></p>
+	<p id="demo3"></p>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	function factorial(x) {
+		document.getElementById("description").innerHTML = fact(x);
+	}
+	function fact(n) {
+		if (n == 1 || n == 0) {
+			return 1;
+		}
+		return n * fact(n - 1);
+	}
+</script>
+<title>Basic</title>
+</head>
+<body>
+	Enter a number:
+	<input type="text" id="fact" oninput="factorial(this.value)">
+	<p id="description"></p>
+</body>
+</html>
